@@ -9,10 +9,14 @@ package com.polytech.polytech.entity;
 
 import java.util.Date;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 
+@Entity
+@Table(name = "reservation")
 public class reservation {
 
     @Id
@@ -70,6 +74,27 @@ public class reservation {
 
     public void setReservation(int reservation) {
         this.reservation = reservation;
+    }
+
+    public Date getDate_debut() {
+        return date_debut;
+    }
+
+    public void setDate_debut(Date date_debut) {
+        this.date_debut = date_debut;
+    }
+
+    public Date getDate_fin() {
+        return date_fin;
+    }
+
+    public void setDate_fin(Date date_fin) {
+        this.date_fin = date_fin;
+    }
+    
+    public String toString() {
+        return "Reservation [id=" + id + ", utilisateur_id=" + utilisateur_id + ", terrain_id=" + terrain_id
+                + ", reservation=" + reservation + ", date_debut=" + date_debut + ", date_fin=" + date_fin + "]";
     }
 
 }
