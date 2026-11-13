@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: projet_capgemin
+  datasource:
+    url: jbc:mariadb://localhost:3306/projet_capgemini
+    username: moctar
+    password: password
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MariaDBDialect
+    show-sql: true
